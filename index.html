@@ -1,10 +1,105 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html class="no-js" lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>PdR Nodo Polis</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PdR Nodo Polis</title>
+    <link rel="stylesheet" href="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
+    <link rel="stylesheet" href="/css/foundation.min.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
+
 <body>
-	PdR Nodo Polis
+    <div class="off-canvas-wrapper">
+        <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+            <div class="off-canvas position-left reveal-for-large" id="my-info" data-off-canvas data-position="left">
+                <div class="row column">
+                    <br>
+                    <img class="thumbnail" src="http://placehold.it/550x350">
+                    <h5>¿Qué es esto?</h5>
+                    <p>pol.is nos permite evidenciar cuales son los consensos existentes dentro de la red y desde ahí construir acciones en conjunto.</p>
+                </div>
+            </div>
+            <div class="off-canvas-content" data-off-canvas-content>
+                <div class="title-bar hide-for-large">
+                    <div class="title-bar-left">
+                        <button class="menu-icon" type="button" data-open="my-info"></button>
+                        <span class="title-bar-title">¿Qué es esto?</span>
+                    </div>
+                </div>
+                <div class="callout primary">
+                    <div class="row column">
+                        <h1><b>Opinódromo</b> del Partido de la Red</h1>
+                        <p class="lead">Para expresar lo que pensás y sentís acerca de los temas que te apasionan, elegí uno de los <i>polis</i> abiertos</p>
+                    </div>
+                </div>
+                <div class="row small-up-2 medium-up-3 large-up-4">
+                    <div class="column">
+                        <div class="card" data-open="exampleModal1">
+                            <div class="card-divider">
+                                <h4>El PdR en las Elecciones 2017</h4>
+                            </div>
+                            <img src="http://placehold.it/200x200">
+                            <div class="card-section">
+                                <p>¿Cómo deberíamos plantear este desafío?</p>
+                            </div>
+                        </div>
+                        <div class="reveal" id="exampleModal1" data-reveal>
+                            <div class='polis' data-conversation_id='55nbn9ezai'></div>
+                            <button class="close-button" data-close aria-label="Close modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-divider">
+                                <h4>Proximamente...</h4>
+                            </div>
+                            <img src="http://placehold.it/200x200">
+                            <div class="card-section">
+                                <p>Este puede ser un tema propuesto por vos :)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="card">
+                            <div class="card-divider">
+                                <h4>Quizas...</h4>
+                            </div>
+                            <img src="http://placehold.it/200x200">
+                            <div class="card-section">
+                                <p>Este puede ser <b>otro</b> tema propuesto por vos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <hr>
+                <div class="row">
+                    <div class="columns">
+                        <h3>¿Querés proponer un polis?</h3>
+                        <p>¡Envianos tu idea!</p>
+                        <label>Nombre
+                            <input type="text" placeholder="Nombre">
+                        </label>
+                        <label>Email
+                            <input type="text" placeholder="Email">
+                        </label>
+                        <label>
+                            Mensaje
+                            <textarea placeholder="Nombre del polis, por qué es importante, etc..."></textarea>
+                        </label>
+                        <input type="submit" class="button expanded" value="Submit">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="http://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+    <script async='true' src='https://pol.is/embed.js'></script>
+    <script src="/js/index.js"></script>
 </body>
+
 </html>
