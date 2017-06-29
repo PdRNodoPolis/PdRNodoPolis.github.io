@@ -1,0 +1,4 @@
+Display none:
+	- #visualization_div (Gráfico)
+	- #groupSelectionViewContainer (Opinion group botones)
+	- #carouselPane (carousel de tarjetas)

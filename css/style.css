@@ -1,2 +1,12 @@
-#carouselPane {display: initial;}
-.groupSelectionView {display: initial;}
+.callout {
+	background-color: #006C87;
+	color: #eee;
+}
+
+.thumbnail {
+	background: #006C87;
+}
+
+.card:hover {
+	box-shadow:0 0 6px 1px rgba(33,153,232,.5)
+}
