@@ -1,30 +1,32 @@
 
 <?php
-require_once './PHPMailerAutoload.php';
 
-if ($_POST) {
+// Pear Mail Library
+require_once "./Mail-1.4.1/Mail.php";
 
-$mail = new PHPMailer(); // create a new object
-$mail->SMTPDebug = 1; // debugging: 1 = errors and messages, 2 = messages only
-$mail->SMTPAuth = true; // authentication enabled
-$mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
-$mail->Host = "ssl://smtp.gmail.com";
-$mail->Port = 465; // or 587
-$mail->IsHTML(true);
-$mail->SetFrom('pdrnodopolis@gmail.com', 'Opinodromo');
-$mail->Username = "pdrnodopolis@gmail.com";
-$mail->Password = "opinodromo";
-$mail->Subject = $_POST['subject'];
-$mail->Body = $_POST['body'];
-$mail->AddAddress('pdrnodopolis@gmail.com', 'Opinodromo');
+$from = '<pdrnodopolis@gmail.com>';
+$to = '<pdrnodopolis@gmail.com>';
+$subject = $_POST['subject'];
+$body = $_POST['body'];
 
-    if(!$mail->send()) {
-        $data = array('success' => false, 'message' => 'El mensaje no ha sido enviado, por favor inténtelo de nuevo.');
-        echo json_encode($data);
-        exit;
-    }
+$headers = array(
+    'From' => $from,
+    'To' => $to,
+    'Subject' => $subject
+);
 
-    $data = array('success' => true, 'message' => '¡El mensaje fue enviado exitosamente.');
-    echo json_encode($data);
+$smtp = Mail::factory('smtp', array(
+        'host' => 'ssl://smtp.gmail.com',
+        'port' => '465',
+        'auth' => true,
+        'username' => 'pdrnodopolis@gmail.com',
+        'password' => 'opinodromo'
+    ));
 
+$mail = $smtp->send($to, $headers, $body);
+
+if (PEAR::isError($mail)) {
+    echo('<p>' . $mail->getMessage() . '</p>');
+} else {
+    echo('<p>Message successfully sent!</p>');
 }
