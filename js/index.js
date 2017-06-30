@@ -1,6 +1,6 @@
 $(document).foundation();
 
-var sendProposal = function() {
+$('#submit-proposal').click(function() {
     var sendingMessage = true;
     var name = $('#form-name').val();
     var email = $('#form-email').val();
@@ -18,9 +18,9 @@ var sendProposal = function() {
 
     $.ajax({
         type: "POST",
-        // beforeSend: function(request) {
-        //     request.setRequestHeader("Access-Control-Allow-Origin", '*');
-        // },
+        beforeSend: function(request) {
+            request.setRequestHeader("Access-Control-Allow-Origin", '*');
+        },
         url: "/mailer/email.php",
         data: data,
         success: function() {
@@ -28,4 +28,4 @@ var sendProposal = function() {
         },
         contentType: 'application/x-www-form-urlencoded'
     });
-}
+});
