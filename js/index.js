@@ -18,13 +18,14 @@ var sendProposal = function() {
 
     $.ajax({
         type: "POST",
-        beforeSend: function(request) {
-            request.setRequestHeader("Access-Control-Allow-Origin", '*');
-        },
+        // beforeSend: function(request) {
+        //     request.setRequestHeader("Access-Control-Allow-Origin", '*');
+        // },
         url: "/mailer/email.php",
         data: data,
         success: function() {
             alert('Mensaje enviado correctamente.')
-        }
+        },
+        contentType: 'application/x-www-form-urlencoded'
     });
 }
