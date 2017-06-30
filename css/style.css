@@ -1,12 +1,17 @@
 .callout {
-	background-color: #006C87;
-	color: #eee;
+    background-color: #006C87;
+    color: #eee;
+    border-radius: 0;
 }
 
 .thumbnail {
-	background: #006C87;
+    background: #006C87;
 }
 
 .card:hover {
-	box-shadow:0 0 6px 1px rgba(33,153,232,.5)
+    box-shadow: 0 0 6px 1px rgba(33, 153, 232, .5)
+}
+
+.is-off-canvas-open {
+    overflow: visible;
 }

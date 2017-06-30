@@ -17,14 +17,15 @@
                 <div class="row column">
                     <br>
                     <img class="thumbnail" src="/img/logo-white.png">
-                    <h5>¿Para qué un Opinódromo?</h5>
-                    <p><a href="http://docs.pol.is" target="_blank">pol.is</a> nos permite crear conversaciones que dejen en evidencia cuales son los consensos existentes dentro de la red de una manera simple.</p>
+                    <h5>¿Para qué un <b>Opinódromo?</b></h5>
+                    <p><a href="http://docs.pol.is" target="_blank">pol.is</a> nos permite crear conversaciones inteligentes a gran escala. Si todos participamos podemos en muy pocos minutos tener una red de los consensos existentes y las articulaciones posibles en torno a intereses comunes. La principal función es dejar en evidencia los estados de opinión de amplios grupos sin necesidad de intercambios masivos de mensajes y con la posibilidad de recopilarlos todos.</p>
                     <br>
                     <h5>¿Cómo funciona?</h5>
                     <ol>
-                        <li>Elegí una de las conversaciones abiertas.</li>
-                        <li>Votá los comentarios según estés de acuerdo o no.</li>
-                        <li>Compartí tu propia perpectiva si no está representada.</li>
+                        <li>Elegí una de las conversaciones abiertas. Éstas se refieren a temas específicos.</li>
+                        <li>Contanos con cuales afirmaciones estas de acuerdo o en desacuerdo.</li>
+                        <li>Podes aportar una postura propia que sientas que no esta presente y que podría representar a alguien mas. Acordate que tiene que estar formulada como una afirmación.</li>
+                        <li>Podes sugerir algún tema nuevo para saber que opinan los otros pares (el formulario de la pantalla principal).</li>
                     </ol>
                 </div>
             </div>
@@ -88,22 +89,22 @@
                         <h3>¿Querés proponer una conversación nueva?</h3>
                         <p>¡Envianos tu idea!</p>
                         <label>Nombre
-                            <input type="text" placeholder="Nombre">
+                            <input id="issue-name" type="text" placeholder="Nombre">
                         </label>
                         <label>Email
-                            <input type="text" placeholder="Email">
+                            <input id="issue-email" type="text" placeholder="Email">
                         </label>
                         <label>
                             Mensaje
-                            <textarea placeholder="Nombre del polis, por qué es importante, etc..."></textarea>
+                            <textarea id="issue-msg" placeholder="Nombre del polis, por qué es importante, etc..."></textarea>
                         </label>
-                        <input type="submit" class="button expanded" value="Enviar">
+                        <input type="submit" class="button expanded" value="Enviar" onclick="sendProposal()">
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="/js/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/foundation/6.2.4/foundation.min.js"></script>
     <script async='true' src='https://pol.is/embed.js'></script>
     <script src="/js/index.js"></script>
