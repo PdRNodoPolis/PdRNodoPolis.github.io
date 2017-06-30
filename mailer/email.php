@@ -18,6 +18,13 @@ $mail->Subject = $_POST['subject'];
 $mail->Body = $_POST['body'];
 $mail->AddAddress('pdrnodopolis@gmail.com', 'Opinodromo');
 
-    $mail->send();
-        
-?>
+    if(!$mail->send()) {
+        $data = array('success' => false, 'message' => 'El mensaje no ha sido enviado, por favor inténtelo de nuevo.');
+        echo json_encode($data);
+        exit;
+    }
+
+    $data = array('success' => true, 'message' => '¡El mensaje fue enviado exitosamente.');
+    echo json_encode($data);
+
+}
