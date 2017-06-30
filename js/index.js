@@ -2,9 +2,9 @@ $(document).foundation();
 
 var sendProposal = function() {
     var sendingMessage = true;
-    var name = $('#issue-name').val();
-    var email = $('#issue-email').val();
-    var msg = $('#issue-msg').val();
+    var name = $('#form-name').val();
+    var email = $('#form-email').val();
+    var msg = $('#form-msg').val();
     var date = new Date().getDate();
     var month = new Date().getMonth();
     var year = new Date().getFullYear();
@@ -17,11 +17,14 @@ var sendProposal = function() {
 
 
     $.ajax({
-    type: "POST",
-    url: "/mailer/email.php",
-    data: data,
-    success: function(){
-        alert('Mensaje enviado correctamente.')
-    }
-});
+        type: "POST",
+        beforeSend: function(request) {
+            request.setRequestHeader("Access-Control-Allow-Origin", '*');
+        },
+        url: "/mailer/email.php",
+        data: data,
+        success: function() {
+            alert('Mensaje enviado correctamente.')
+        }
+    });
 }
