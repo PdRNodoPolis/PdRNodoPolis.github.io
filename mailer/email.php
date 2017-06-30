@@ -12,7 +12,7 @@ $mail->SMTPSecure = 'ssl'; // secure transfer enabled REQUIRED for Gmail
 $mail->Host = "ssl://smtp.gmail.com";
 $mail->Port = 465; // or 587
 $mail->IsHTML(true);
-$mail->Username = "pdrnodopolis@gmail.com";
+$mail->Username = "pdrnodopolis";
 $mail->Password = "opinodromo";
 $mail->SetFrom('pdrnodopolis@gmail.com', 'Opinodromo');
 $mail->Subject = '[Opinodromo PdR] ' . $_POST['subject'];
