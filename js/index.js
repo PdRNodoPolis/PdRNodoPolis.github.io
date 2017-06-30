@@ -23,8 +23,11 @@ $('#submit-proposal').click(function() {
         },
         url: "/mailer/email.php",
         data: data,
-        success: function() {
-            alert('Mensaje enviado correctamente.')
+        success: function(res) {
+            console.log(res)
+        },
+        error: function(res) {
+            console.log(res)
         },
         contentType: 'application/x-www-form-urlencoded'
     });
