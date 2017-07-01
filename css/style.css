@@ -9,11 +9,12 @@
 }
 
 .button {
-	background-color: #003c87;
+    background-color: #003c87;
 }
 
 .card:hover {
-    box-shadow: 0 0 6px 1px rgba(33, 153, 232, .5)
+    -webkit-box-shadow: 0 0 6px 1px rgba(33, 153, 232, .5);
+            box-shadow: 0 0 6px 1px rgba(33, 153, 232, .5)
 }
 
 .card > img {
@@ -29,24 +30,31 @@
 }
 
 #title-container {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
 }
 
 #footer {
-	background-color: #006C87;
-	text-align: center;
-	padding: 20px;
-	margin: 20px 0 -1px 0;
-	color: #eee;
+    background-color: #006C87;
+    text-align: center;
+    padding: 20px;
+    margin: 20px 0 -1px 0;
+    color: #eee;
 }
 
 #corazon {
-	background-image: url('/img/heartIcon.png');
-	width: 20px;
-	height: 20px;
-	background-size: cover;
-	display: inline-block;
+    background-image: url('/img/heartIcon.png');
+    width: 20px;
+    height: 20px;
+    background-size: cover;
+    display: inline-block;
 }
