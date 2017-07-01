@@ -58,3 +58,8 @@
     background-size: cover;
     display: inline-block;
 }
+
+.preload {
+    display: none;
+    height: 0;
+}
