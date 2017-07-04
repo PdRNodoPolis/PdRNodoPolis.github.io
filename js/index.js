@@ -31,9 +31,12 @@ $('#submit-proposal').click(function() {
 });
 
 
-$('.card').click(function () {
+$('.card').click(function() {
     var polis = $(this).attr('data-open');
-    ga('Polis', 'Open', polis);
+    ga('send', 'event', 'Polis', 'Open', polis);
 })
 
-
+$('.report-icon').click(function() {
+    var report = $(this).attr('href');
+    ga('send', 'event', 'Report', 'Open', report);
+})
