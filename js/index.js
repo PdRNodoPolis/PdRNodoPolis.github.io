@@ -33,7 +33,9 @@ $('#submit-proposal').click(function() {
 
 $('.card').click(function() {
     var polis = $(this).attr('data-open');
+    var c = $(this).attr('class');
     ga('send', 'event', 'Polis', 'Open', polis);
+    console.log('c: '+c)
     console.log('GA: '+polis);
 })
 
