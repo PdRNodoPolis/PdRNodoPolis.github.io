@@ -1,3 +1,7 @@
+:focus {
+    outline: none;
+}
+
 .callout {
     background-color: #006C87;
     color: #eee;
@@ -13,12 +17,7 @@
 }
 
 .card:hover {
-    -webkit-box-shadow: 0 0 6px 1px rgba(33, 153, 232, .5);
-            box-shadow: 0 0 6px 1px rgba(33, 153, 232, .5)
-}
-
-.card > img {
-    height: 100%;
+    color: #005d74;
 }
 
 .is-off-canvas-open {
@@ -34,13 +33,13 @@
     display: -ms-flexbox;
     display: flex;
     -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
     -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
 }
 
 #footer {
@@ -69,10 +68,28 @@
     flex-direction: row;
     align-items: baseline;
     justify-content: space-between;
+    padding-bottom: 0;
 }
 
-.card-divider, .card > img {
+.card-section li {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.card-divider,
+.card {
     cursor: pointer;
+}
+
+.card-divider {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.card-divider>p {
+    margin-bottom: 0;
 }
 
 .report-icon-container {
@@ -95,7 +112,72 @@
     margin-right: 10px;
 }
 
-.report-icon:hover {    
+.report-icon:hover {
     background-color: #006c87;
     color: #eee;
+}
+
+.title-bar {
+    background: #006c87;
+}
+
+.overlay {
+    flex-grow: 1;
+    display: none;
+    background: rgba(0, 108, 135, 0.3);
+    max-width: 100%;
+    transition: ease 0.3s;
+}
+
+.grayscale {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -webkit-transition: all 1s ease;
+}
+
+.grayscale:hover {
+    filter: grayscale(0%);
+    filter: gray;
+    -webkit-filter: grayscale(0%);
+    filter: none;
+    transition: 0.5s ease;
+}
+
+.title {
+    align-items: baseline;
+    flex-direction: column;
+}
+
+.title>h4 {
+    margin-bottom: 0;
+}
+
+.callout {
+    padding-bottom: 0;
+    border: none;
+}
+
+.title-bar {
+    padding-bottom: 0;
+}
+
+.row-column {
+    padding-right: 0;
+}
+
+.author {
+    font-size: 14px;
+    color: #666;
+    margin-bottom: 0;
+}
+
+.platform {
+    font-size: 14px;   
+    color: #333;
+    margin-bottom: 0;
+    min-width: 20%;
+}
+
+.date {
+
 }

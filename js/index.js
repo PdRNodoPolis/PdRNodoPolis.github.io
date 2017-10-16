@@ -35,12 +35,34 @@ $('.card').click(function() {
     var polis = $(this).attr('data-open');
     var c = $(this).attr('class');
     ga('send', 'event', 'Polis', 'Open', polis);
-    console.log('c: '+c)
-    console.log('GA: '+polis);
+    console.log('c: ' + c)
+    console.log('GA: ' + polis);
 })
 
 $('.report-icon').click(function() {
     var report = $(this).attr('href');
-    ga('send', 'event', 'Report', 'Open', report);
-    console.log('GA: '+report);
+    ga('send', 'event', 'Polis', 'Report', report);
+    console.log('GA: ' + report);
 })
+
+//probando
+$('.card').hover(function() {
+    $(this).find('.report').css('color', '#0a0a0a');;
+}, function() {
+});
+
+$('.report').click(function() {
+    var win = window.open('/data-exports/03102017/ReportePolis-pdr-elecciones-2017-03102017.html', '_blank');
+    if (win) {
+        //Browser has allowed it to be opened
+        win.focus();
+    } else {
+        //Browser has blocked it
+        alert('Please allow popups for this website');
+    }
+
+})
+
+$('.report').hover(function() {
+    $(this).css('color', '#0a0a0a');
+}, function() {});
