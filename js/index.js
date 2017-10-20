@@ -20,13 +20,13 @@ $('#submit-proposal').click(function() {
         type: "POST",
         url: "/mailer/email.php",
         data: data,
+        contentType: 'application/x-www-form-urlencoded',
         success: function(res) {
             console.log(res)
         },
         error: function(res) {
             console.log(res)
-        },
-        contentType: 'application/x-www-form-urlencoded'
+        }
     });
 });
 

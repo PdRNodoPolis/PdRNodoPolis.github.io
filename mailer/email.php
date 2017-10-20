@@ -20,18 +20,11 @@ $mail->Body = $_POST['body'];
 $mail->AddAddress('pdrnodopolis@gmail.com');
 
 
-    if(!$mail->send()) {
-        $data = array('success' => false, 'message' => 'El mensaje no ha sido enviado, por favor inténtelo de nuevo.');
-        echo json_encode($data);
-        exit;
-    }
-
-    $data = array('success' => true, 'message' => 'El mensaje fue enviado exitosamente.');
-    echo json_encode($data);
-
-} else {
-
-    $data = array('success' => false, 'message' => 'Please fill out the form completely.');
+ if(!$mail->Send()) {
+    echo "Mailer Error: " . $mail->ErrorInfo;
+ } else {
+    echo "Message has been sent";
+ }> false, 'message' => 'Please fill out the form completely.');
     echo json_encode($data);
 
 }
